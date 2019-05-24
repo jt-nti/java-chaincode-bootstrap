@@ -12,7 +12,7 @@ group 'org.example.java-chaincode-bootstrap'
 version '1.0-SNAPSHOT'
 
 dependencies {
-    implementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:1.4.2-SNAPSHOT'
+    implementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.0.0-SNAPSHOT'
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.+'
 }
@@ -22,6 +22,7 @@ repositories {
     maven {
         url "https://nexus.hyperledger.org/content/repositories/snapshots/"
     }
+    maven { url 'https://jitpack.io' } // TODO this doesn't seem right- shouldn't fabric-chaincode-shim have sorted it?!
 }
 
 shadowJar {
